@@ -88,6 +88,12 @@ h4{
       .container2 {
         padding-right: 4.3em !important;
 
+
+          a:hover, a:focus, a:active {
+    background-color: white !important;
+    color: black !important; 
+  }
+
       }
 
       }

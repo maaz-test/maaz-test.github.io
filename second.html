@@ -149,6 +149,8 @@
     padding-right: 2.9em;
   }
 
+
+
 }
 
 @media (max-width: 992px) {
@@ -158,8 +160,6 @@
   padding-left: 5vw;
   padding-right: 4.3vw;
   padding-bottom: 3.1vw;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 1;
   /*background-color: black !important; */
@@ -175,6 +175,9 @@
   overflow: hidden !important;
  
 }
+.menu_position {
+    padding-bottom: 1.1em !important;
+}
 
 .nav-link{
   font-family: bebe !important;
@@ -185,13 +188,6 @@
 
 }
 
-.no-transition {
-  -webkit-transition: height 0.01s;
-  -moz-transition: height 0.01s;
-  -ms-transition: height 0.01s;
-  -o-transition: height 0.01s;
-  transition: height 0.01s;
-}
 .nav-link:hover {
     color: white !important;
     background-color: transparent !important;
@@ -206,6 +202,12 @@
     transition: 0.4s;
     border: none;
 }
+
+.nav{
+  padding-bottom: 1em !important;
+}
+
+
 
 
 button {
@@ -241,19 +243,20 @@ button:focus {outline:0;}
 
     <div class = "nav_container">
 
-      <nav class="navbar no-transition navbar-expand-lg navbar-white bg-white" role="navigation">
+      <nav class="navbar navbar-expand-lg navbar-white bg-white" role="navigation">
         <a class="unjaded_title navbar-brand" href="index.html"><p id = "white_unjaded">UNJADED</p></a>
 
-        <button onclick = "openNav('white');myFunction(this)" class = "no-transition navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
-          
+        <button onclick = "openNav('white');myFunction(this)" class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+          <div class = "menu_position">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
+          </div>
           
         </button>
 
 
-          <div class="collapse no-transition navbar-collapse navHeaderCollapse">
+          <div class="collapse navbar-collapse navbar-toggle navHeaderCollapse">
             <ul class="nav navbar-nav navbar-right">
           
               <li class="nav-item">

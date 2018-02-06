@@ -317,13 +317,12 @@ button:focus {outline:0;}
 }
 
 .overlay .closebtn {
-    position: absolute;
-    font-size: 40px;
-    font-family: proxima-light;
-    color: white;
-    top: 1.3vw;
-    right: 3.5vw;
-
+  position: fixed;
+  padding-top: 2vw;
+  right: 20px;
+  font-size: 40px;
+  font-family: proxima-light;
+  color: white;
 }
 
 
@@ -393,7 +392,13 @@ button:focus {outline:0;}
           </ul>
 
         <div id="myNav" class="overlay">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+          <span>
+            <div class = "menu_position">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            </div>
+          </span>
+          
           <div class = "overlay-content">
             <ul class="nav navbar-nav navbar-right">
           

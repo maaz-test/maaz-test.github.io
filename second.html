@@ -199,8 +199,6 @@
 
 .bar1, .bar2, .bar3 {
   display: block !important;
-
-
 }
 
 .regular_navigation {
@@ -217,6 +215,22 @@
     transition: 0.4s;
     border: none;
     display: none;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-6px, 4px);
+  background-color: white;
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-5px, -5px);
+  background-color: white;
 }
 
 .first_picture { 
@@ -279,20 +293,16 @@ button {
 button:focus {outline:0;}
 
 
-.black_bg {
-  background-color: #111111 !important;
-}
-
 .overlay {
     height: 100%;
     width: 100%;
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 0;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
     background-color: #111111;
+
 }
 
 .overlay-content {
@@ -301,6 +311,7 @@ button:focus {outline:0;}
     width: 100%;
     text-align: center;
     margin-top: 30px;
+    
 }
 
 .overlay a {
@@ -310,31 +321,14 @@ button:focus {outline:0;}
     color: #818181;
     display: block;
     transition: 0.3s;
+    
 }
 
 .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
 }
 
-.overlay .closebtn {
-  position: fixed;
-  padding-top: 2vw;
-  right: 20px;
-  font-size: 40px;
-  font-family: proxima-light;
-  color: white;
-}
 
-
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-
-}
 
   </style>
 
@@ -392,12 +386,10 @@ button:focus {outline:0;}
           </ul>
 
         <div id="myNav" class="overlay">
-        
-          <span>
-            <div class = "menu_position">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            </div>
-          </span>
+
+  
+<!--         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ -->    
           
           <div class = "overlay-content">
             <ul class="nav navbar-nav navbar-right">
@@ -439,13 +431,14 @@ button:focus {outline:0;}
           </div>
         </div>
 
-        <span onclick="openNav()">
+        <span id = "hamburger">
           <div class = "menu_position">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
           </div>
         </span>
+
 
       </nav>
     </div>
@@ -483,21 +476,40 @@ button:focus {outline:0;}
 
   <script>
 
-    function openNav() {
-    document.getElementById("myNav").style.display = "block";
+  var hamburger = document.getElementById('hamburger');
+  var menu = document.getElementById('myNav');
+  menu.style.display = "none";
+  hamburger.addEventListener('click', function() {
+  
+  this.classList.toggle("change");
+  if (menu.style.display === "none") {
+    menu.style.display = "block";
     document.getElementById("white-unjaded").style.color = "white";
+    
 
-    }
-
-    function closeNav() {
-    document.getElementById("myNav").style.display = "none";
+  } else {
+    menu.style.display = "none";
     document.getElementById("white-unjaded").style.color = "black";
 
 
+
+
   }
+})
 
 
   </script>
 
 </html>
+
+  <!--   // function openNav() {
+    // document.getElementById("myNav").style.display = "block";
+    // document.getElementById("white-unjaded").style.color = "white";
+
+    // }
+
+  //   function closeNav() {
+  //   document.getElementById("myNav").style.display = "none";
+  //   document.getElementById("white-unjaded").style.color = "black";
+  // } -->
 

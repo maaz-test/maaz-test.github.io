@@ -90,7 +90,7 @@ h4{
       }
 
 
-    a:hover, a:focus, a:active {
+    a:hover, a:active {
       background-color: white !important;
       color: black !important; 
     }
@@ -99,6 +99,7 @@ h4{
 
   @media (min-width: 992px) {
     .masthead {
+
       height: 100vh; }
       .masthead h3 {
         font-size: 1.375em; } }
@@ -132,7 +133,7 @@ a {
   padding-left: 1.44em !important;
 
 }
-  a:hover, a:focus, a:active {
+  a:hover, a:active {
     background-color: white !important;
     color: black !important; 
   }

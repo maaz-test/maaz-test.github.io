@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
 
-    <title>Unjaded</title>
+    <title>Article 1</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,9 +17,7 @@
     <!-- Custom styles for this template -->
     <style>
       body {
-        overflow-x: hidden; 
-        /*text-decoration: none !important;*/
-
+        overflow-x: hidden;
       }
       @media (min-width: 992px) {
         body {
@@ -37,21 +35,22 @@
     	src: url(Fonts/Metropolis-Medium.otf);
 		}
 
+		@font-face {
+    	font-family: proxima-semi-bold;
+    	src: url(Fonts/Metropolis-SemiBold.otf);
+		}
+
+		@font-face {
+    	font-family: proxima-bold;
+    	src: url(Fonts/Metropolis-Bold.otf);
+		}
+
+		
+
 	  @font-face {
     	font-family: proxima-light;
     	src: url(Fonts/Metropolis-Light.otf);
 		}
-
-	.story_title {
-		font-family: proxima-light;
-    font-size: calc(9px + 1vw) !important;
-		letter-spacing: .08em !important;
-		line-height: 1em !important;
-		margin-bottom: 62px !important;
-    font-weight: 0 !important;
-
-		
-	}
 
 	.nav-link {
 		font-family: proxima;
@@ -72,38 +71,16 @@
 		color: black;
 	}
 
-	.unjaded_title {
+	.unjaded_title{
 		font-family: bebe;
 		font-size: 25px !important;
-    letter-spacing: .1em !important;
-    z-index: 3;
+	    letter-spacing: .1em !important;
+	    z-index: 3;
 	}
 
-  .unjaded_title:hover {
-    color: black;
-  }
-
-
-	.caption {
-	    /*position: absolute;*/
-	    top: 40%;
-	    left: 5%;
-    	color: white;
-    	font-family: bebe;
-      
-    	
+	.unjaded_title:hover {
+		color: black;
 	}
-
-  .caption_text_size {
-    font-size: 35px !important;
-    letter-spacing: .12em !important;
-
-
-  }
-
-  .active {
-    color: black !important;
-  }
 
   .nav_container {
     position: relative;
@@ -113,18 +90,14 @@
   }
 
 @media only screen and (min-width: 992px) {
-  button {
-    display: none;
 
-  }
   .unjaded_title {
     font-size: 42px!important;
     letter-spacing: .02em !important;
-    
   }
 
   .unjaded_title:hover {
-    color: black;
+  	color: black;
   }
 
   .nav_container{
@@ -136,11 +109,6 @@
     padding-right: 2.9em;
   }
 
-  .caption_text_size {
-    font-size: 2.604166666666667vw;
-  }
-
-
 }
 
 @media (max-width: 992px) {
@@ -150,18 +118,17 @@
 
 
   }
+  article {
+  	padding-top: 7rem;
+  }
 .navbar {
-  position: fixed;
-  padding-top: 3.1vw;
-  padding-left: 5vw;
-  padding-right: 4.3vw;
-  padding-bottom: 0.1vw;
-  width: 100%;
-  z-index: 1;
-
-}
-.story_title {
-  padding-top: 24vw !important;
+	position: fixed;
+	padding-top: 3.1vw;
+	padding-left: 5vw;
+	padding-right: 4.3vw;
+  	padding-bottom: 0.1vw;
+  	left: 0;
+  	right: 0;
 
 }
 
@@ -219,65 +186,9 @@
   background-color: white;
 }
 
-.first_picture { 
-  max-width: 1500px; /* actual img width */
-  height: 1000px; /* actual img height - IE7 */
-  background-image: url(Perrymans_04037.jpg);
-  background-size: cover;
-  background-position: center;
-  -webkit-transition-property: width, height; /* Safari */
-  -webkit-transition-duration: 2s; /* Safari */
-  transition-property: width, height;
-  transition-duration: 2s;
-
-}
-
-.first_picture:hover > .hover_pic {
-    width:1500px;
-    height:1000px;
-    position:absolute;
-    background-color:#000;
-    opacity:0.5;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-  }
-
-.second_picture { 
-  max-width: 1500px; /* actual img width */
-  height: 1000px; /* actual img height - IE7 */
-  background-image: url(./img/charcoal.jpg);
-  background-size: cover;
-  background-position: center;
-  -webkit-transition-property: width, height; /* Safari */
-  -webkit-transition-duration: 2s; /* Safari */
-  transition-property: width, height;
-  transition-duration: 2s;
-
-}
-
-.second_picture:hover > .hover_pic {
-    width:1500px;
-    height:1000px;
-    position:absolute;
-    background-color:#000;
-    opacity:0.5;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-  }
-
 .nav{
   padding-bottom: 1em !important;
 }
-
-
-button {
-  background-color: transparent;
-  border: none;
-
-}
-
-button:focus {outline:0;}
-
 
 .overlay {
     height: 100%;
@@ -300,6 +211,7 @@ button:focus {outline:0;}
     
 }
 
+
 .overlay a {
     padding: 8px;
     font-size: 36px;
@@ -313,15 +225,29 @@ button:focus {outline:0;}
     color: #f1f1f1;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+article {
+    max-width: 950px;
+    height: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+nav {
+	position: fixed;
+}
 
 
   </style>
-
   </head>
 
   <body>
-
-
 
     <div class = "nav_container">
 
@@ -332,8 +258,7 @@ button:focus {outline:0;}
           <ul class="nav navbar-nav navbar-right">
           
               <li class="nav-item">
-                <a class="nav-link active" href="second.html">FACES
-                  <span class="sr-only">(current)</span>
+                <a class="nav-link" href="second.html">FACES
                 </a>
               </li>
 
@@ -349,12 +274,15 @@ button:focus {outline:0;}
                 <a class="nav-link" href="#">PRINTS</a>
               </li>
 
+
           </ul>
 
         </div>
 
 
         <ul class="nav navbar-nav ml-auto regular_navigation">
+
+
               <li class="nav-item">
                 <a class="nav-link" href="#">ABOUT US</a>
               </li>
@@ -370,8 +298,7 @@ button:focus {outline:0;}
             <ul class="nav navbar-nav navbar-right">
           
               <li class="nav-item">
-                <a class="nav-link active" href="second.html">FACES
-                  <span class="sr-only">(current)</span>
+                <a class="nav-link" href="second.html">FACES
                 </a>
               </li>
 
@@ -386,12 +313,10 @@ button:focus {outline:0;}
               <li class="nav-item">
                 <a class="nav-link" href="#">PRINTS</a>
               </li>
-
-              
             </ul>
 
             <ul class="nav navbar-nav ml-auto">
-   
+
               <li class="nav-item">
                 <a class="nav-link" href="#">ABOUT US</a>
               </li>
@@ -417,30 +342,18 @@ button:focus {outline:0;}
 
 
     <!-- Page Content -->
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h1 class="story_title">stories about muslims.</h1>
-      </div>
-    </div>
+    <article class = "text-center">
+ 
+	    <h1 style="font-family: bebe; font-size: 43px; color: rgb(51, 51, 51); letter-spacing: .06em; line-height: 1.5em;">Title of the Article</h1>
 
-
-  <a href = "article.html" style="text-decoration: none">
-    <div class="first_picture">
-      <div class = "hover_pic"></div>
-      <div class = "caption col-md-12">
-        <h1 class="caption_text_size">Some Really Nice Looking Cake // Oh Yeah</h1>
-      </div>
-    </div>
-  </a>
-
-  <a href = "index.html" style="text-decoration: none">
-    <div class="second_picture">
-      <div class = "hover_pic"></div>
-      <div class = "caption col-md-12">
-        <h1 class="caption_text_size">Charcoal Corner // On Fire</h1>
-      </div>
-    </div>
-  </a>
+		<h2 class = "mt-2" style="font-size: 13px; font-family: proxima; color: rgb(187, 187, 187); letter-spacing: .15em; font-weight: 400; text-transform: uppercase;">January 24, 2018</h2>
+		<p class = "mt-2" style="font-size: 15px; text-transform: uppercase; font-family: proxima-bold; color: rgb(17, 17, 17); line-height: 2.2em; letter-spacing: .03em;">A brief description of the article</p>
+		<img class = "mt-2" src="./img/sample_image_1.jpg">
+		<p class = "mt-5 text-left" style="font-size: 15px; font-family: proxima; line-height: 2.2em; letter-spacing: .03em;">
+		    	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec accumsan dui. Aliquam eget lacinia nibh, vel hendrerit odio. Quisque faucibus nisi semper, elementum massa sed, dictum ex. Maecenas erat ante, bibendum sed sem nec, porta vulputate leo. Pellentesque eleifend finibus sem sed sagittis. In rhoncus commodo consequat. Praesent vulputate sodales interdum. Nulla facilisi. Aenean quis dolor nec nunc interdum rutrum in nec ipsum. Sed et urna tempus, dictum neque sed, egestas diam. Nunc dolor arcu, condimentum ac ex eget, tristique consectetur arcu.
+		</p>
+	</article>
+	
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
